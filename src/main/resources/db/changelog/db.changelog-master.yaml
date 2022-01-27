@@ -1,0 +1,75 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Gulyás Krisztián
+      changes:
+        - createTable:
+            tableName: person
+            columns:
+              - column:
+                  name: personid
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+        
+  - changeSet:
+      id: 2
+      author: Gulyás Krisztián
+      changes:
+        - createTable:
+            tableName: address
+            columns:
+              - column:
+                  name: addressid
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: personid
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: address
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+        
+  - changeSet:
+      id: 3
+      author: Gulyás Krisztián
+      changes:
+        - createTable:
+            tableName: contact
+            columns:
+              - column:
+                  name: contactid
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: addressid
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: phone
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
