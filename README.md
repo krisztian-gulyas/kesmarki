@@ -7,5 +7,5 @@ Feladat
 - Alapértelmezett adatbázis H2
 - Database Schema Change Management: Liquibase
 - Framework: Spring Boot
-
+- IDE: Eclipse
 A folyamatokból az 'end' szocskával lehet kilépni!
