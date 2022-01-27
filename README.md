@@ -1,2 +1,2 @@
-# kesmarki
+# Késmárki
 Feladat
